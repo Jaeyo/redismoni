@@ -1,0 +1,33 @@
+{
+  "name": "redismon",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "0.0.16",
+    "koa-csrf": "^3.0.5",
+    "koa-etag": "^3.0.0",
+    "koa-logger": "^2.0.1",
+    "koa-router": "^7.1.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "node app/server/server.js",
+    "start_old": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
