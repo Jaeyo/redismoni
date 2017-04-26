@@ -1,7 +1,7 @@
 
 
 export default router => {
-  router.get('/', async ctx => {
+  router.get('/test', async ctx => {
     ctx.body = 'hello'
   })
 }
