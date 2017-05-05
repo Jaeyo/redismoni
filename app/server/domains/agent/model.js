@@ -9,11 +9,13 @@ export const agentDataStore = datastore({
 
 
 export default class Agent {
-  constructor({ id, name, key }) {
-    this.id = id
+  constructor({ _id, name, key }) {
+    this._id = _id
     this.name = name
     this.key = key
   }
 
-  save() { return save(this, agentDataStore) }
+  save() {
+    return save(this, agentDataStore)
+  }
 }

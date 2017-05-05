@@ -6,8 +6,8 @@ const app = new Koa()
 
 loggingLayer(app)
 initialLayer(app)
-staticLayer(app)
 apiLayer(app, apis)
+staticLayer(app)
 errorLayer(app)
 
 export default app
