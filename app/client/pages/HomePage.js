@@ -8,20 +8,19 @@ export default class HomePage extends Component {
   constructor() {
     super()
     this.state = {
-      agent: [],
+      agents: [],
       agentName: '',
     }
   }
 
   async refresh() {
-    const { agents } = await getAgents()
+    const agents = await getAgents()
     this.setState(() => ({ agents }))
   }
 
   async addAgent() {
     const { agentName } = this.state
-    const result = await addAgent({ name: agentName })
-    console.log({ result })
+    addAgent({ name: agentName })
   }
 
   onAgentNameChange(e) {
@@ -30,13 +29,14 @@ export default class HomePage extends Component {
   }
 
   render() {
-    const { agentName } = this.state
+    const { agents, agentName } = this.state
 
     return (
       <div>
         <PageHeader />
         <div>
           <Button onClick={() => this.refresh()}>refresh</Button>
+          {agents.map(agent => <div>{agent.name}</div>)}
           <hr />
           <FormControl
             type="text"
