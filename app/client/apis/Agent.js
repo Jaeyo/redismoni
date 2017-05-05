@@ -1,8 +1,9 @@
-import { fetchGet, fetchPost } from '../common/api'
+import { fetchGet, fetchPost } from '../common/Api'
+import Urls from '../common/Urls'
 
 
 export const getAgents = async () => {
-  const resp = await fetchGet('/api/agents')
+  const resp = await fetchGet(Urls.apis.agents())
   const body = await resp.json()
   if (resp.ok)
     return body.agents
@@ -10,6 +11,6 @@ export const getAgents = async () => {
 }
 
 export const addAgent = async payload => {
-  const resp = await fetchPost('/api/agents', payload)
+  const resp = await fetchPost(Urls.apis.agents(), payload)
   return resp.ok
 }

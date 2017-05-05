@@ -1,4 +1,4 @@
-import agent from '../domains/agent/api'
+import agent from '../domains/agent/Api'
 
 
 const pages = router => {

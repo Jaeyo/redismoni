@@ -1,5 +1,5 @@
-import createReducer from '../utils/reducer'
-import { actions } from '../actions/agent'
+import createReducer from '../utils/Reducer'
+import { actions } from '../actions/Agent'
 
 
 const initialState = {

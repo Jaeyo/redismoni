@@ -1,4 +1,4 @@
-import { getAgents } from '../apis/agent'
+import { getAgents } from '../apis/Agent'
 
 export const actions = {
   requestAgents: 'agent:requestAgents',

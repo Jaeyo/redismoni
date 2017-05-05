@@ -1,6 +1,6 @@
 import Koa from 'koa'
 import { loggingLayer, initialLayer, staticLayer, apiLayer, errorLayer } from './middlewares'
-import apis from '../common/api'
+import apis from '../common/Api'
 
 const app = new Koa()
 

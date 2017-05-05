@@ -5,7 +5,7 @@ import etag from 'koa-etag'
 import router from 'koa-router'
 import convert from 'koa-convert'
 import cors from 'koa-cors'
-import error from './error'
+import error from './Error'
 import serve from 'koa-static'
 import views from 'koa-views'
 

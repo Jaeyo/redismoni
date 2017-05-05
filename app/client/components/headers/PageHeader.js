@@ -1,17 +1,16 @@
 import React from 'react'
-import { Nav, Navbar, NavItem } from 'react-bootstrap'
-import { browserHistory } from 'react-router'
+import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap'
+import { Link, browserHistory } from 'react-router'
+import Urls from '../../common/Urls'
 
 
 export default () => (
   <Navbar>
-    <Navbar.Header>
-      <Navbar.Brand>
-        Redismoni
-      </Navbar.Brand>
-    </Navbar.Header>
-    <Nav pullRight>
-      <NavItem onClick={() => browserHistory.push('/home2')}>test1</NavItem>
+    <NavbarBrand>
+      <Link to={Urls.pages.home()}>Redismoni</Link>
+    </NavbarBrand>
+    <Nav>
+      <NavItem onClick={() => browserHistory.push(Urls.pages.agents())}>agent</NavItem>
       <NavItem>
       </NavItem>
     </Nav>

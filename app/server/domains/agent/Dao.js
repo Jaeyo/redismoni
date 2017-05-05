@@ -1,4 +1,4 @@
-import Agent, { agentDataStore } from './model'
+import Agent, { agentDataStore } from './Model'
 
 
 export const findAll = async () => {

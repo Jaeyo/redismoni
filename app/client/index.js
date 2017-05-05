@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import 'bootstrap/dist/css/bootstrap.css';
 import { browserHistory, IndexRoute, Route, Router } from 'react-router'
 import configureStore from './store/Store'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { Provider } from 'react-redux'
 import App from './App'
-import HomePage from './pages/HomePage'
+import HomePage from './pages/home/HomePage'
+import AgentPage from './pages/agent/AgentPage'
 import './index.css'
-import AgentPage from './pages/AgentPage'
 
 
 const store = configureStore({})
