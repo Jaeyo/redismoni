@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import App from './App'
 import HomePage from './pages/HomePage'
 import './index.css'
+import AgentPage from './pages/AgentPage'
 
 
 const store = configureStore({})
@@ -16,7 +17,7 @@ const router = (
   <Router history={history}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
-      <Route path="/home2" component={HomePage} />
+      <Route path="/agents" component={AgentPage} />
     </Route>
   </Router>
 )

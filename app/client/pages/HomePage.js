@@ -20,7 +20,7 @@ export default class HomePage extends Component {
 
   async addAgent() {
     const { agentName } = this.state
-    addAgent({ name: agentName })
+    await addAgent({ name: agentName })
   }
 
   onAgentNameChange(e) {

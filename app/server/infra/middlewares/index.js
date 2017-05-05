@@ -7,6 +7,7 @@ import convert from 'koa-convert'
 import cors from 'koa-cors'
 import error from './error'
 import serve from 'koa-static'
+import views from 'koa-views'
 
 export const loggingLayer = app => app.use(logger())
 
@@ -14,6 +15,7 @@ export const initialLayer = app =>
   app.use(bodyParser())
     .use(conditionalGet())
     .use(etag())
+    .use(views('public', { extension: 'html' }))
 
 export const staticLayer = app => app.use(serve('public'))
 
