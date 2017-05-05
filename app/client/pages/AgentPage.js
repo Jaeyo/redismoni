@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PageHeader from '../components/headers/PageHeader'
 
 
-export default class AgentPage extends Component {
+class AgentPage extends Component {
   render() {
     return (
       <div>
@@ -12,3 +13,6 @@ export default class AgentPage extends Component {
     )
   }
 }
+
+export default connect(
+)(AgentPage)

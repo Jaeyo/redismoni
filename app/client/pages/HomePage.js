@@ -1,26 +1,30 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PageHeader from '../components/headers/PageHeader'
 import { Button, FormControl } from 'react-bootstrap'
 import { addAgent, getAgents } from '../apis/agent'
+import { selectAgents } from '../selector/agent'
+import { requestAgents as requestAgentsAction } from '../actions/agent'
 
 
-export default class HomePage extends Component {
+class HomePage extends Component {
   constructor() {
     super()
     this.state = {
-      agents: [],
-      agentName: '',
+      agentName: ''
     }
   }
 
-  async refresh() {
-    const agents = await getAgents()
-    this.setState(() => ({ agents }))
+  refresh() {
+    this.props.requestAgents()
   }
 
   async addAgent() {
     const { agentName } = this.state
-    await addAgent({ name: agentName })
+    const result = await addAgent({ name: agentName })
+    if (result) {
+      this.props.requestAgents()
+    }
   }
 
   onAgentNameChange(e) {
@@ -29,7 +33,8 @@ export default class HomePage extends Component {
   }
 
   render() {
-    const { agents, agentName } = this.state
+    const { agentName } = this.state
+    const { agents } = this.props
 
     return (
       <div>
@@ -50,3 +55,16 @@ export default class HomePage extends Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  agents: selectAgents(state),
+})
+
+const mapDispatchToProps = dispatch => ({
+  requestAgents: () => dispatch(requestAgentsAction())
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(HomePage)

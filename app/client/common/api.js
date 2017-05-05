@@ -1,6 +1,12 @@
 
 
-export const fetchGet = (url) => fetch(url)
+export const fetchGet = (url) =>
+  fetch(url, {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  })
 
 export const fetchPost = (url, payload) =>
   fetch(url, {
