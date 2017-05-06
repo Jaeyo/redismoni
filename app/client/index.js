@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'bootstrap/dist/css/bootstrap.css';
 import { browserHistory, IndexRoute, Route, Router } from 'react-router'
 import configureStore from './store/Store'
 import { syncHistoryWithStore } from 'react-router-redux'

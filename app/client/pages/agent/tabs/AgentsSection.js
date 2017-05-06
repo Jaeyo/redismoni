@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { selectAgents } from '../../../selector/Agent'
 import { requestAgents as requestAgentsAction } from '../../../actions/Agent'
-import { Button } from 'reactstrap'
+import { Button } from 'react-bootstrap'
 import SimpleAgentItem from '../../../components/agent/SimpleAgentItem'
 
 

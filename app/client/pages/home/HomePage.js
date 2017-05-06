@@ -4,7 +4,7 @@ import PageHeader from '../../components/headers/PageHeader'
 import { addAgent, getAgents } from '../../apis/Agent'
 import { selectAgents } from '../../selector/Agent'
 import { requestAgents as requestAgentsAction } from '../../actions/Agent'
-import { Button, Input } from 'reactstrap'
+import { Button, FormControl } from 'react-bootstrap'
 
 
 class HomePage extends Component {
@@ -43,7 +43,7 @@ class HomePage extends Component {
           <Button onClick={() => this.refresh()}>refresh</Button>
           {agents.map(agent => <div>{agent.name}</div>)}
           <hr />
-          <Input
+          <FormControl
             type="text"
             value={agentName}
             placeholder="agent name"
