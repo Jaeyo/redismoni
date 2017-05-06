@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { } from 'react-bootstrap'
 import PageHeader from '../../components/headers/PageHeader'
 import AgentsSection from './tabs/AgentsSection'
 

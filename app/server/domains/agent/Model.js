@@ -1,5 +1,5 @@
 import datastore from 'nedb-promise'
-import { save } from '../../common/Model'
+import { save } from '../../common/NedbModel'
 
 
 export const agentDataStore = datastore({

@@ -1,12 +1,13 @@
 import React from 'react'
-import { Card } from 'antd'
+import { Panel } from 'react-bootstrap'
 
 
 const SimpleAgentItem = ({ agent }) => (
-  <Card title={agent.name}>
+  <Panel header={agent.name}>
     <p>blabla</p>
-    <p>this is simple agent item</p>
-  </Card>
+    <p>blabla</p>
+    <p>blabla</p>
+  </Panel>
 )
 
 export default SimpleAgentItem

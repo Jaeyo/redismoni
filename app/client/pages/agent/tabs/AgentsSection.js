@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { selectAgents } from '../../../selector/Agent'
 import { requestAgents as requestAgentsAction } from '../../../actions/Agent'
@@ -13,12 +12,7 @@ class AgentsSection extends Component {
     return (
       <div>
         <Button onClick={() => requestAgents()}>refresh</Button>
-        {agents.map(agent =>
-          <SimpleAgentItem
-            key={agent._id}
-            agent={agent}
-          />
-        )}
+        {agents.map(agent => <SimpleAgentItem key={agent._id} agent={agent} /> )}
       </div>
     )
   }
