@@ -7,5 +7,6 @@ export default {
   },
   apis: {
     agents: () => '/api/agents',
+    metrics: () => '/api/metrics',
   },
 }
