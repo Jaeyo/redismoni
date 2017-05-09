@@ -22,15 +22,10 @@ export default async (ctx, next) => {
 
       case "json":
         ctx.type = "application/json";
-        if (process.env.NODE_ENV === "development" || err.expose) {
-          ctx.body = {
-            error: err.message
-          };
-        } else {
-          ctx.body = {
-            error: ctx.status
-          };
-        }
+        ctx.body = {
+          ok: false,
+          error: err.message,
+        };
         break;
 
       case "html":

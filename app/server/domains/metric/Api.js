@@ -1,11 +1,11 @@
-import { createMany } from './Dao';
+import { createMany } from './Service';
 import Urls from '../../../../common/Urls';
 
 
 export default router => {
   router.post(Urls.apis.metrics(), async ctx => {
-    const { metrics } = ctx.request.body
-    await createMany(metrics)
+    const { agentKey, metrics } = ctx.request.body
+    await createMany(agentKey, metrics)
     ctx.body = { ok: true }
   })
 }
