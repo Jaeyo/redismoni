@@ -1,5 +1,5 @@
 import { fetchGet, fetchPost } from '../common/Api'
-import Urls from '../common/Urls'
+import Urls from '../../../common/Urls'
 
 
 export const getAgents = async () => {

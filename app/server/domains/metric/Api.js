@@ -1,12 +1,11 @@
-import { apiUrlRootPath } from '../../common/Constants'
-import { createMany } from './Dao'
+import { createMany } from './Dao';
+import Urls from '../../../../common/Urls';
 
 
 export default router => {
-  router.post(`/${apiUrlRootPath}/metrics`, async ctx => {
+  router.post(Urls.apis.metrics(), async ctx => {
     const { metrics } = ctx.request.body
     await createMany(metrics)
     ctx.body = { ok: true }
   })
 }
-

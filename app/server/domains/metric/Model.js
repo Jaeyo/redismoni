@@ -1,4 +1,4 @@
-import Influx from 'influx'
+import * as Influx from 'influx'
 import { influx } from '../../infra/influxdb/index'
 
 
@@ -49,6 +49,6 @@ export class Metrics {
   }
 
   save() {
-    return influx.writePoints([this.metrics.map(metric => metric.toPoint())])
+    return influx.writePoints(this.metrics.map(metric => metric.toPoint()))
   }
 }

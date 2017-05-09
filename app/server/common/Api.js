@@ -1,4 +1,5 @@
 import agent from '../domains/agent/Api'
+import metric from '../domains/metric/Api'
 
 
 const pages = router => {
@@ -12,4 +13,5 @@ const pages = router => {
 export default router => {
   pages(router)
   agent(router)
+  metric(router)
 }

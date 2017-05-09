@@ -1,7 +1,7 @@
 import React from 'react'
 import { Nav, Navbar, NavItem } from 'react-bootstrap'
 import { browserHistory, Link } from 'react-router'
-import Urls from '../../common/Urls'
+import Urls from '../../../../common/Urls'
 
 
 export default () => (
