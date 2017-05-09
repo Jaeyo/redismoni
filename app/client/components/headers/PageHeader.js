@@ -14,6 +14,7 @@ export default () => (
       </Navbar.Brand>
     </Navbar.Header>
     <Nav pullRight>
+      <NavItem onClick={() => browserHistory.push(Urls.pages.dashBoard())}>dashboard</NavItem>
       <NavItem onClick={() => browserHistory.push(Urls.pages.agents())}>agent</NavItem>
     </Nav>
   </Navbar>

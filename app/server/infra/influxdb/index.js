@@ -1,6 +1,5 @@
-import * as Influx from 'influx'
-import Config from '../../Config'
-// import { schema as metricSchema } from '../../domains/metric/Model'
+import * as Influx from 'influx';
+import Config from '../../Config';
 
 
 export const influx = new Influx.InfluxDB({
@@ -9,9 +8,6 @@ export const influx = new Influx.InfluxDB({
   port: Config.influxdb.port,
   username: Config.influxdb.user,
   password: Config.influxdb.password,
-  // schema: [
-  //   metricSchema,
-  // ],
 })
 
 export const initializeInflux = async () => {

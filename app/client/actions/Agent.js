@@ -1,5 +1,6 @@
 import { getAgents } from '../apis/Agent'
 
+
 export const actions = {
   requestAgents: 'agent:requestAgents',
   successAgents: 'agent:successAgents',
@@ -25,7 +26,7 @@ export const requestAgents = () => async (dispatch, getState) => {
     dispatch(_requestAgents())
     const agents = await getAgents()
     dispatch(_successAgents(agents))
-  } catch({ msg }) {
-    dispatch(_failureAgents(msg))
+  } catch({ message }) {
+    dispatch(_failureAgents(message))
   }
 }

@@ -7,7 +7,7 @@ export const getAgents = async () => {
   const body = await resp.json()
   if (resp.ok)
     return body.agents
-  throw new Error(body.msg)
+  throw new Error(body.error)
 }
 
 export const addAgent = async payload => {
