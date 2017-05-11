@@ -15,8 +15,20 @@ const successSampleQuery = (state, { result }) => Object.assign({}, state, ({
 
 const failureSampleQuery = (state, action) => state
 
+
+const requestAddWidget = (state, action) => state
+
+const successAddWidget = (state, action) => state
+
+const failureAddWidget = (state, action) => state
+
+
 export default createReducer(initialState, {
   [actions.requestSampleQuery]: requestSampleQuery,
   [actions.successSampleQuery]: successSampleQuery,
   [actions.failureSampleQuery]: failureSampleQuery,
+
+  [actions.requestAddWidget]: requestAddWidget,
+  [actions.successAddWidget]: successAddWidget,
+  [actions.failureAddWidget]: failureAddWidget,
 })

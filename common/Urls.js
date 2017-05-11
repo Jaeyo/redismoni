@@ -11,5 +11,6 @@ export default {
     agents: () => '/api/agents',
     metrics: () => '/api/metrics',
     metricSampleQuery: q => '/api/metrics/sample-query' + (q == null ? '' : `?q=${q}`),
+    widgets: () => '/api/dashboard/widgets',
   },
 }

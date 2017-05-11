@@ -13,7 +13,7 @@ class AddWidgetPage extends Component {
         <div>
           <h1>add widget</h1>
           <Accordion>
-            <Panel header="custom query widget" eventKey="1">
+            <Panel header="custom query widget" eventKey="1" defaultExpanded={true}>
               <CustomQuerySection />
             </Panel>
             <Panel header="redis widget" eventKey="2">

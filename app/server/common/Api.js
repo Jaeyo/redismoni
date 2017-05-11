@@ -1,5 +1,6 @@
 import agent from '../domains/agent/Api';
 import metric from '../domains/metric/Api';
+import dashboard from '../domains/dashboard/Api';
 import Urls from '../../../common/Urls';
 
 
@@ -13,4 +14,5 @@ export default router => {
   pages(router)
   agent(router)
   metric(router)
+  dashboard(router)
 }
