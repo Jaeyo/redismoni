@@ -1,5 +1,6 @@
 import Widget from './Model'
 import { widgetDataStore } from './Model'
+import { isEmpty } from '../../../../common/Utils';
 
 
 export const findAllWidgets = async () => {
@@ -7,4 +8,12 @@ export const findAllWidgets = async () => {
   return docs.map(doc => new Widget(doc))
 }
 
-export const createWidget = (name, query) => new Widget({ name, query }).save()
+export const getWidgetByUuid = async uuid => {
+  const docs = await widgetDataStore.find({ uuid })
+  if (isEmpty(docs)) {
+    return null
+  }
+  return new Widget(docs[0])
+}
+
+export const createWidget = (name, type, query) => new Widget({ name, type, query }).save()

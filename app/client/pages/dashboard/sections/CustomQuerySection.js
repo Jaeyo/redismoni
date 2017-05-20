@@ -7,6 +7,7 @@ import { isEmpty } from '../../../../../common/Utils';
 import MetricDataGrid from '../../../components/metric/MetricDataGrid';
 import MetricDataLineChart from '../../../components/metric/MetricDataLineChart';
 import { message } from 'antd'
+import { widgetTypes } from '../../../../../common/domains/dashboard/Constants';
 
 
 class CustomQuerySection extends Component {
@@ -37,7 +38,8 @@ class CustomQuerySection extends Component {
       return
     }
 
-    requestAddWidget(name, query)
+    const type = widgetTypes.lineChart
+    requestAddWidget(name, type, query)
   }
 
   render() {
@@ -76,7 +78,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   requestSampleQuery: query => dispatch(requestSampleQueryAction(query)),
-  requestAddWidget: (name, query) => dispatch(requestAddWidgetAction(name, query)),
+  requestAddWidget: (name, type, query) => dispatch(requestAddWidgetAction(name, type, query)),
 })
 
 export default connect(

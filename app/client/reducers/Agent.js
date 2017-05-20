@@ -1,4 +1,5 @@
 import createReducer from '../utils/Reducer'
+import _ from 'lodash'
 import { actions } from '../actions/Agent'
 
 
@@ -9,9 +10,10 @@ const initialState = {
 
 const requestAgent = (state, action) => state
 
-const successAgent = (state, { agents }) => Object.assign({}, state, ({
-  agents,
-}))
+const successAgent = (state, { agents }) =>
+  _.merge({}, state, ({
+    agents,
+  }))
 
 const failureAgent = (state, action) => state
 

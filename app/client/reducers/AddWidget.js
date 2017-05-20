@@ -1,4 +1,5 @@
 import createReducer from '../utils/Reducer'
+import _ from 'lodash'
 import { actions } from '../actions/AddWidget'
 
 
@@ -9,9 +10,10 @@ const initialState = {
 
 const requestSampleQuery = (state, action) => state
 
-const successSampleQuery = (state, { result }) => Object.assign({}, state, ({
-  sampleQueryResult: result,
-}))
+const successSampleQuery = (state, { result }) =>
+  _.merge({}, state, {
+    sampleQueryResult: result,
+  })
 
 const failureSampleQuery = (state, action) => state
 

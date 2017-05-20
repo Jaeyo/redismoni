@@ -1,4 +1,4 @@
-import { createMany, doSampleQuery } from './Service';
+import { createMany, execQuery } from './Service';
 import Urls from '../../../../common/Urls';
 
 
@@ -12,7 +12,7 @@ export default router => {
   router.get(Urls.apis.metricSampleQuery(), async ctx => {
     const query = ctx.request.query.q
     ctx.body = {
-      result: await doSampleQuery(query)
+      result: await execQuery(query)
     }
   })
 }

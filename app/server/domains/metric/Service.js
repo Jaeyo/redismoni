@@ -19,7 +19,7 @@ export const createMany = async (agentKey, metricObjs) => {
   }
 }
 
-export const doSampleQuery = async query => {
+export const execQuery = async query => {
   try {
     return await influx.query(`${query} order by time desc limit ${SAMPLE_QUERY_LIMIT}`)
   } catch(err) {

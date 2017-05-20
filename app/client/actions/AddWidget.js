@@ -51,10 +51,10 @@ export const requestSampleQuery = query => async (dispatch, getState) => {
   }
 }
 
-export const requestAddWidget = (name, query) => async (dispatch, getState) => {
+export const requestAddWidget = (name, type, query) => async (dispatch, getState) => {
   try {
     dispatch(_requestAddWidget())
-    await addWidget(name, query)
+    await addWidget(name, type, query)
     dispatch(_successAddWidget())
     msg.info('widget added')
   } catch ({ message }) {

@@ -10,9 +10,10 @@ export const widgetDataStore = datastore({
 
 
 export default class Widget {
-  constructor({ uuid, name, query }) {
+  constructor({ uuid, name, type, query }) {
     this.uuid = uuid
     this.name = name
+    this.type = type
     this.query = query
   }
 
