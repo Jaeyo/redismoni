@@ -41,7 +41,7 @@ class HomePage extends Component {
         <PageHeader />
         <div>
           <Button onClick={() => this.refresh()}>refresh</Button>
-          {agents.map(agent => <div>{agent.name}</div>)}
+          {agents.map(agent => <div key={agent.uuid}>{agent.name}</div>)}
           <hr />
           <FormControl
             type="text"
