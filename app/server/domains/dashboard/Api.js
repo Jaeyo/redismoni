@@ -21,7 +21,7 @@ export default router => {
 
   // get widget data
   router.get(Urls.apis.widgetData(), async ctx => {
-    const { uuid } = ctx.request.param
+    const { uuid } = ctx.params
     ctx.body = {
       data: await getWidgetDataByUuid(uuid),
     }
